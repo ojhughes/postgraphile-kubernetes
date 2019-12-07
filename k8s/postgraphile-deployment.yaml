@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
+  namespace: postgraphile-system
   labels:
     app: postgraphile
   name: postgraphile
@@ -18,7 +19,7 @@ spec:
         app: postgraphile
     spec:
       containers:
-      - image: dockerhub.io/ambivalentotter/postgraphile
+      - image: dockerhub.io/ambivalentotter/postgraphile:latest
         name: postgraphile
         resources: {}
 status: {}
