@@ -19,7 +19,7 @@ spec:
         app: postgraphile
     spec:
       containers:
-      - image: dockerhub.io/ambivalentotter/postgraphile:latest
+      - image: ambivalentotter/postgraphile:latest
         name: postgraphile
         resources: {}
 status: {}
