@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: postgraphile
+  name: postgraphile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgraphile
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: postgraphile
+    spec:
+      containers:
+      - image: dockerhub.io/graphile/postgraphile
+        name: postgraphile
+        resources: {}
+status: {}

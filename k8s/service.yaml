@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: postgraphile-svc
+  name: postgraphile-svc
+spec:
+  ports:
+  - name: "5000"
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: postgraphile-svc
+  type: ClusterIP
+status:
+  loadBalancer: {}
